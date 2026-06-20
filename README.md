@@ -1,65 +1,36 @@
-# Portafolio Personal - Cristian Rufino
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Un portafolio profesional y moderno desarrollado con **Next.js**, **React**, **TypeScript** y **Tailwind CSS**. Este sitio web está diseñado para mostrar proyectos, habilidades técnicas y proporcionar una forma sencilla de contacto.
+## Getting Started
 
-## Características
+First, run the development server:
 
-- ⚡ **Rendimiento Óptimo**: Desarrollado con Next.js (App Router) para tiempos de carga ultrarrápidos y Server-Side Rendering (SSR).
-- 📱 **Diseño Responsivo**: Totalmente adaptable a dispositivos móviles, tablets y escritorios usando Tailwind CSS.
-- 🔍 **SEO Optimizado**: 
-  - Archivos automatizados `sitemap.xml` y `robots.txt`.
-  - Configuración global de `viewport` para el índice "Mobile-First" de Google.
-  - Metadatos dinámicos y compatibilidad con Open Graph.
-- 💼 **Gestión de Proyectos**: Sección dedicada para exhibir proyectos de software con soporte de rutas dinámicas.
-- ✉️ **Contacto Directo**: Formulario integrado y accesos directos a redes sociales (LinkedIn, GitHub) e email.
-
-## Tecnologías Utilizadas
-
-- **Framework**: Next.js (App Router)
-- **Librería UI**: React
-- **Estilos**: Tailwind CSS
-- **Lenguaje**: TypeScript
-- **Fuentes**: Google Fonts (Inter)
-
-## Estructura del Proyecto
-
-El código fuente principal se encuentra dentro de la carpeta `src/`:
-
-```
-src/
-├── app/          # Rutas principales (Inicio, Sobre Mí, Proyectos, Contacto)
-├── components/   # Componentes reutilizables (Header, Footer, ProjectCard)
-├── lib/          # Configuración y datos mock (data.ts)
-└── types/        # Definiciones de tipos de TypeScript
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Instalación y Uso Local
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/Cramess78/my-portfolio.git
-   cd my-portfolio
-   ```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-2. **Instalar las dependencias**
-   ```bash
-   npm install
-   ```
+## Learn More
 
-3. **Iniciar el servidor de desarrollo**
-   ```bash
-   npm run dev
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-4. **Ver la aplicación**
-   Abre tu navegador y navega a [http://localhost:3000](http://localhost:3000) para ver el resultado.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Despliegue
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-La forma más sencilla de desplegar esta aplicación es utilizando [Vercel](https://vercel.com/), la plataforma de los creadores de Next.js. Si tienes tu cuenta enlazada con GitHub, se puede configurar para hacer despliegues automáticos con cada `git push`.
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Creado con ♥ por [Cristian Rufino](https://github.com/Cramess78).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

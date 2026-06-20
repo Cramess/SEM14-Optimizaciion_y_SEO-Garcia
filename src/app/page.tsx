@@ -7,50 +7,53 @@ export default function Home() {
     const featuredProjects = projects.filter((p) => p.featured);
 
     return (
-        <div className="container mx-auto px-4 py-12">
+        <div className="page-wrapper">
             {/* Hero Section */}
-            <section className="text-center mb-20">
-                <div className="relative w-32 h-32 mx-auto mb-6">
+            <section className="container hero-section animate-fadeInUp">
+                {/* Avatar with spinning gradient border */}
+                <div className="avatar-wrapper">
                     <Image
                         src={personalInfo.avatar}
                         alt={personalInfo.name}
                         fill
-                        className="rounded-full object-cover"
+                        className="avatar-img"
                         priority
-                        sizes="128px"
+                        sizes="140px"
                     />
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-                    {personalInfo.name}
+
+                <p className="hero-subtitle">✦ Bienvenido a mi portafolio ✦</p>
+
+                <h1 className="hero-title">
+                    Hola, soy{' '}
+                    <span className="text-gradient">{personalInfo.name}</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-600 mb-6">
+
+                <p
+                    className="hero-description"
+                    style={{ color: 'var(--purple-400)', fontWeight: 600, marginBottom: '0.5rem' }}
+                >
                     {personalInfo.title}
                 </p>
-                <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
-                    {personalInfo.description}
-                </p>
-                <div className="flex gap-4 justify-center">
-                    <Link
-                        href="/projects"
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-                    >
-                        Ver Proyectos
+
+                <p className="hero-description">{personalInfo.description}</p>
+
+                <div className="btn-group">
+                    <Link href="/projects" className="btn-primary">
+                        Ver Proyectos →
                     </Link>
-                    <Link
-                        href="/about"
-                        className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition"
-                    >
+                    <Link href="/about" className="btn-secondary">
                         Sobre Mí
                     </Link>
                 </div>
             </section>
 
             {/* Featured Projects */}
-            <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                    Proyectos Destacados
+            <section className="container" style={{ paddingBottom: '4rem' }}>
+                <h2 className="section-title">
+                    Proyectos <span>Destacados</span>
                 </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="projects-grid stagger">
                     {featuredProjects.map((project) => (
                         <ProjectCard key={project.slug} project={project} />
                     ))}

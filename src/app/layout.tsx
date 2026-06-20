@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-    themeColor: '#ffffff',
+    themeColor: '#020d02',
     width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
@@ -83,7 +83,7 @@ export default function RootLayout({
         <html lang="es" className={inter.variable}>
             <body className="flex flex-col min-h-screen">
                 <Header />
-                <main className="grow bg-gray-50">{children}</main>
+                <main className="grow">{children}</main>
                 <Footer />
             </body>
         </html>
