@@ -1,21 +1,32 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { personalInfo } from '@/lib/data';
 
+/* ─── Fonts: loaded via next/font (auto-preloaded, no render blocking) ─── */
 const inter = Inter({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-inter',
+    weight: ['300', '400', '500', '600', '700', '800'],
+    preload: true,
+});
+
+const spaceGrotesk = Space_Grotesk({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-space-grotesk',
+    weight: ['400', '500', '600', '700'],
+    preload: true,
 });
 
 export const viewport: Viewport = {
     themeColor: '#020d02',
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,
+    maximumScale: 5,
 };
 
 export const metadata: Metadata = {
@@ -31,6 +42,8 @@ export const metadata: Metadata = {
         'next.js',
         'react',
         'typescript',
+        'kotlin',
+        'android',
         'portafolio',
     ],
     authors: [{ name: personalInfo.name }],
@@ -80,7 +93,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="es" className={inter.variable}>
+        <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
             <body className="flex flex-col min-h-screen">
                 <Header />
                 <main className="grow">{children}</main>
